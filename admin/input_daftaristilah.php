@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tambah Istilah Medis</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
 <div class="container">
     <h2>Form Tambah Istilah Medis</h2>
-
-    <!-- Form input untuk tambah daftar istilah -->
     <form id="formTambahIstilah">
         <label for="istilahMedis">Istilah Medis:</label>
         <input type="text" id="istilahMedis" name="istilahMedis" required>
@@ -21,7 +19,7 @@
         <input type="text" id="unsurKata" name="unsurKata" required>
 
         <label for="informasiMedis">Informasi Medis:</label>
-        <textarea id="informasiMedis" name="informasiMedis" required></textarea>
+        <textarea id="informasiMedis" name="informasiMedis" cols="30" rows="10" required></textarea>
 
         <label for="kodeICD">Kode ICD:</label>
         <input type="text" id="kodeICD" name="kodeICD" required>

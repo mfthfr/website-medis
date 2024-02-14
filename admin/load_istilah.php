@@ -11,12 +11,12 @@ if (mysqli_num_rows($result) > 0) {
     $no = 1;
     while ($row = mysqli_fetch_assoc($result)) {
         $output .= '<tr>';
-        $output .= '<td>' . $no++ . '</td>';
+        $output .= '<td style="text-align: center;">' . $no++ . '</td>';
         $output .= '<td>' . $row['istilah_medis'] . '</td>';
         $output .= '<td>' . $row['unsur_kata'] . '</td>';
-        $output .= '<td>' . $row['informasi_medis'] . '</td>';
+        $output .= '<td width="40%">' . $row['informasi_medis'] . '</td>';
         $output .= '<td>' . $row['kode_icd'] . '</td>';
-        $output .= '<td>';
+        $output .= '<td style="text-align: center;">';
         $output .= '<button class="edit-btn" data-id="' . $row['id_istilah'] . '">Edit</button>';
         $output .= '<button class="hapus-btn" data-id="' . $row['id_istilah'] . '">Hapus</button>';
         $output .= '</td>';

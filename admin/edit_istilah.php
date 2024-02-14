@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Istilah Medis</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
                 <input type="text" id="editUnsurKata" name="editUnsurKata" value="<?php echo $row['unsur_kata']; ?>" required>
                 
                 <label for="informasiMedis">Informasi Medis:</label>
-                <input type="text" id="editInformasiMedis" name="editInformasiMedis" value="<?php echo $row['informasi_medis']; ?>" required>
+                <textarea id="editInformasiMedis" name="editInformasiMedis" cols="30" rows="10" required><?php echo $row['informasi_medis']; ?></textarea>
                 
                 <label for="kodeICD">Istilah Medis:</label>
                 <input type="text" id="editKodeICD" name="editKodeICD" value="<?php echo $row['kode_icd']; ?>" required>
@@ -53,32 +53,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="assets/javascript/script.js"></script>
-<!-- <script>
-    $('#simpanEditBtn').click(function() {
-        var id = $('#editId').val();
-        var istilahMedis = $('#editIstilahMedis').val();
-        var unsurKata = $('#editUnsurKata').val();
-        var informasiMedis = $('#editInformasiMedis').val();
-        var kodeICD = $('#editKodeICD').val();
-
-        $.ajax({
-            url: 'update_istilah.php',
-            type: 'POST',
-            data: {
-                id: id,
-                istilahMedis: istilahMedis,
-                unsurKata: unsurKata,
-                informasiMedis: informasiMedis,
-                kodeICD: kodeICD
-                // Add other fields if needed
-            },
-            success: function(response) {
-                alert('Data berhasil diupdate');
-                window.location = 'daftar_istilah.php';
-            }
-        });
-    });
-</script> -->
 
 </body>
 </html>

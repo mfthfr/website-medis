@@ -2,11 +2,11 @@
 include '../koneksi/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $idIstilah = $_POST['editId'];
-    $istilahMedis = mysqli_real_escape_string($conn, $_POST['editIstilahMedis']);
-    $unsurKata = mysqli_real_escape_string($conn, $_POST['editUnsurKata']);
-    $informasiMedis = mysqli_real_escape_string($conn, $_POST['editInformasiMedis']);
-    $kodeICD = mysqli_real_escape_string($conn, $_POST['editKodeICD']);
+    $id = $_POST['id'];
+    $istilahMedis = mysqli_real_escape_string($conn, $_POST['istilahMedis']);
+    $unsurKata = mysqli_real_escape_string($conn, $_POST['unsurKata']);
+    $informasiMedis = mysqli_real_escape_string($conn, $_POST['informasiMedis']);
+    $kodeICD = mysqli_real_escape_string($conn, $_POST['kodeICD']);
 
     // Query untuk melakukan pembaruan data istilah medis
     $query = "UPDATE tb_istilahmedis 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   unsur_kata = '$unsurKata', 
                   informasi_medis = '$informasiMedis', 
                   kode_icd = '$kodeICD' 
-              WHERE id_istilah = '$idIstilah'";
+              WHERE id_istilah = '$id'";
 
     $result = $conn->query($query);
 
