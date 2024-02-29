@@ -1,7 +1,7 @@
 <?php
 include "../koneksi/koneksi.php";
 
-$itemsPerPage = 5;
+$itemsPerPage = 10;
 
 // Hitung jumlah total baris
 $queryTotalRows = "SELECT COUNT(*) as total FROM tb_istilahmedis";
@@ -35,17 +35,18 @@ if (mysqli_num_rows($result) > 0) {
         $output .= '</tr>';
     }
 } else {
-    $output .= '<tr><td colspan="6">Data tidak ditemukan</td></tr>';
+    $output .= '<tr><td colspan="5">Data tidak ditemukan</td></tr>';
 }
 
+// Output pagination
 echo $output;
 
-echo '<div class="pagination">';
-    for ($i = 1; $i <= $totalPages; $i++) {
-        echo '<a href="?page=' . $i . '">' . $i . '</a>';
-    }
-    echo '</div>';
+echo '<tr><td colspan="5"><div class="pagination">';
+for ($i = 1; $i <= $totalPages; $i++) {
+    echo '<a href="?page=' . $i . '">' . $i . '</a>';
+}
+echo '</div></td></tr>';
 
-// Tambahkan navigasi halaman
+
 
 ?>
