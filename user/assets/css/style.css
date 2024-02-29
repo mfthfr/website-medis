@@ -1,70 +1,62 @@
+/* daftar istilah */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.container table {
+  width: 1000px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.container table, th, td {
+  border: 1px solid #000;
+}
+
+.container th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.container th {
   background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
-#soal-container {
-  max-width: 600px;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container button {
+  cursor: pointer;
 }
 
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #2980b9;
+.pagination a:hover {
+  background-color: #ddd;
 }
 
-label {
-  display: block;
-  margin-bottom: 10px;
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
 }
 
-/* Gaya khusus untuk radio button */
-label input[type="radio"] {
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-/* Gaya tambahan untuk menempatkan radio button di sebelah kiri jawaban */
-label {
-  display: flex;
-  align-items: center;
-}
-
-/* materi */
-#content {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.materi-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-h2 {
-  color: #3498db;
-}
